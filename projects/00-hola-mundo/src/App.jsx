@@ -15,13 +15,23 @@ export function App() {
         //para pasar los props booleanos que hemos creado en followCard debemos poner {nombreDelParametro}=true
         //tambein podemos dejar solo el isFollowing tal cual y se pondra en true
         //este className hace referencia a el css global que contiene la clase App que es nuestro subcomponente
+        // ESTA ES OTRA FORMA SIN EL FORMAT USER NAME <TwitterFollowCard isFollowing={true} userName="OhioObssesedGuy" name="John Doe" />
+        //---------------------------------------------------------------------------------------------------------
+        //Le quito el isFollowing ya qu quiero que sea un estado 
         <section className='App'>
-            <TwitterFollowCard formatUserName = {formatUserName} 
-            isFollowing={true} userName="OhioObssesedGuy" name="John Doe" />
-            <TwitterFollowCard formatUserName = {formatUserName} isFollowing={false} userName="juanito" name="JuanOjayo" />
-            <TwitterFollowCard formatUserName = {formatUserName} isFollowing userName="StinkyGuy" name="Joaquim " />
-            <TwitterFollowCard formatUserName = {formatUserName} isFollowing userName="JosuaToxik" name="Josua" />
+            <TwitterFollowCard formatUserName = {formatUserName} userName="OhioObssesedGuy">
+                John Doe
+            </TwitterFollowCard>
+
+            <TwitterFollowCard formatUserName = {formatUserName} userName="juanito">
+                JuanitoOjayo
+            </TwitterFollowCard>
+            <TwitterFollowCard formatUserName = {formatUserName}  userName="StinkyGuy" >
+                Joaquim
+            </TwitterFollowCard>
+            <TwitterFollowCard formatUserName = {formatUserName}  userName="JosuaToxik" >
+                Josuaa
+            </TwitterFollowCard>
         </section>
-        
     );
 }
