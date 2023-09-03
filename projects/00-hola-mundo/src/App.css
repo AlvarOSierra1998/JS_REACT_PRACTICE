@@ -1,5 +1,7 @@
 /*
-Esto se debe importar en el jsx de nuestro componente
+Esto se debe importar en el jsx de nuestro componente App.jsx
+ESTE CSS AFECTA A NUESTRO COMPONNETE AL COMPLETO PADRE, NO SE RECOMIENDAN CAMBIOS BRUSCOS EN EL CSS POR SI DEBEMOS REUTILIZAR
+ES MEJOR CREAR UN CSS APARTE QUE SEA GLOBAL Y AHI ESPECIFICAR CLASES PARA CADA SUBCOMPONENTE
 */
 
 /*NOMBRE DE LAS className */
@@ -8,6 +10,7 @@ Esto se debe importar en el jsx de nuestro componente
     align-items: center;
     color: #fff;
     font-size: .8rem;
+    justify-content: space-between;
 }
 
 .tw-followCard-header{

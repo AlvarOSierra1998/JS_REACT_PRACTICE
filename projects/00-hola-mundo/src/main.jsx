@@ -1,3 +1,5 @@
+//AQUI SE RENDERIZA EL COMPONENTE
+//--------------------------------------------------------
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 //Aqui debemos importar el componente que hemos creado
@@ -10,16 +12,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <App />
 )
-/*
-//para no tener que poner 3 veces lo mismo, creamos el componente
-//button en el cual le pedimos que nos devuelva
-//lo que queremos que se repita.
-//luego en el react.fragment escribirmos <elementoQueHayamosCreado text="el nombre que va a llevar"/>
+/* Para no tener que poner 3 veces lo mismo, debemos hacer otro archivos jsx
+y una vez creado en el main.jsx ESPECIFICAMOS <App /> (el nombre de nuestro componente) en el render,
+renderizará lo que tenemos en App.jsx*/
 
-//el nombre de nuestros componentes sean empezando en mayuscula
+/*-------------OTRA FORMA DE HACERLO(NO ES LA MAS OPTIMA SOLO ES OTRA VARIANTE)----------------------------------------------------------------------------------------------------------
+el nombre de nuestros componentes sean empezando en mayuscula
+
 const Button = ({text}) => {
-  //el {text} es un parametro que sustituye al texto que tenga nuestro componente
-  //lo añadimos como se ve debajo del </svg> en este caso
+    el {text} es un parametro que sustituye al texto que tenga nuestro componente
+    lo añadimos como se ve debajo del </svg> en este caso
   return (
     <button>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -29,6 +31,7 @@ const Button = ({text}) => {
     </button>
   )
 }
+-----------------------------------------------------------------------------------------
 root.render(
   //para poder renderizar varios elementos se usa el React.Fragment
   <React.Fragment>
