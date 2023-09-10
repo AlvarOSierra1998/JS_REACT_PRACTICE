@@ -12,4 +12,13 @@ body{
     display: flex;
     flex-direction: column ;
     gap: 10px;
+   
+    
 }
+
+/*
+flex-flow: column wrap;
+flex-wrap: wrap-reverse;
+align-content: space-between;
+justify-content:center;
+*/

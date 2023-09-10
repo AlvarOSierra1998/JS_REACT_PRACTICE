@@ -44,14 +44,32 @@ ES MEJOR CREAR UN CSS APARTE QUE SEA GLOBAL Y AHI ESPECIFICAR CLASES PARA CADA S
 }
 /*lo siguiente cambia el estilo del boton al cambiar de estado*/
 .tw-followCard-button.is-following{
-    border: 1px solid red;
-    
-
+    border: 1px solid #bbb;
+    background: transparent;
+    color: #fff;
 }
 .tw-followCard-button:hover{
     background-color: #09f;
 }
-.tw-followCard-button.is-following:hover{
-    background: red;
-
+/*esto hace el hover para que muestre el dejar de seguir*/
+.tw-followCard-text{
+    display: block;
 }
+.tw-followCard-button.is-following:hover{
+    background-color: rgba(255, 103, 103, 0.205);
+    color: red;
+    border: 1px solid red;
+}
+.tw-followCard-button.is-following:hover .tw-followCard-text{
+    display: none;
+}
+
+.tw-followCard-button.is-following:hover .tw-followCard-stopFollow{
+    display: block;
+}
+.tw-followCard-stopFollow{
+    display: none;
+}
+
+
+

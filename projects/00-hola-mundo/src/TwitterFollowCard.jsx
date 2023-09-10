@@ -2,9 +2,10 @@
 //-----------------------------------------------------------------------------------------------------------------------
 import { useState } from "react"
 //este hook nos permite crear una variable que nos permita saber si estamo o no siguientedo al usuario
-export function TwitterFollowCard({formatUserName, userName, children}) {
+export function TwitterFollowCard({ formatUserName, userName, children, initialIsFollowing }) {
     //LA CONSTANTE PARA SABER SI SEGUIMOS AL USUARIO O NO:
-    const [isFollowing, setIsFollowing] = useState(false)
+    const [isFollowing, setIsFollowing] = useState(initialIsFollowing)
+    //Se pasa el isFollowing para indicar que sigues al usuario cada vez q entras en la web
     //en el array pasamos el valor inicial y en el otro el cambio, ejemplo de la luz del cuarto, isFollowing = luz apagada, setIsFollowing = interruptor
     //-----------------------------------------------------------------------------------------------------------------------
     //Creamos la funcion para cambiar el estado del boton, cambiar de seguir a siguiendo con una funcion interna
@@ -27,11 +28,11 @@ export function TwitterFollowCard({formatUserName, userName, children}) {
     //ESTADOS:
     //DEBEMOS CREAR LAS SIGUIENTES CONSTATES:
     //eso es como un if, basicamente va a cambiar el contendio del boton si lo estamos siguiendo o no
-    const text = isFollowing ? 'Siguiendo':'Seguir'
+    const text = isFollowing ? 'Siguiendo' : 'Seguir'
     //CAMBIAR ESTILOS AL DARLE AL SEGUIR, HACEMOS LO SIGUIENTE:
     const buttonClassName = isFollowing
-    ? 'tw-followCard-button is-following'
-    : 'tw-followCard-button'
+        ? 'tw-followCard-button is-following'
+        : 'tw-followCard-button'
     //De esta manera podremos aislar el boton y cambiarle el estilo cuando este cambie de estado, debemos indicar la variable en el className de nuestro boton
     return (
         // es importante especificar los className para que no haga comflicto con otros componentes, 
@@ -39,9 +40,9 @@ export function TwitterFollowCard({formatUserName, userName, children}) {
         <article className='tw-followCard'>
             <header className='tw-followCard-header'>
                 <img
-                //en el tema de la imagen debemos crear la plantilla
+                    //en el tema de la imagen debemos crear la plantilla
                     className='tw-followCard-avatar'
-                // ponemos la varibale de la constantela variable
+                    // ponemos la varibale de la constantela variable
                     src={imageSrc}
                     alt="john Doe" />
                 <div className='tw-followCard-info'>
@@ -51,7 +52,8 @@ export function TwitterFollowCard({formatUserName, userName, children}) {
             </header>
             <aside>
                 <button className={buttonClassName} onClick={handleClick}>
-                    {text}
+                    <span className="tw-followCard-text">{text}</span>
+                    <span className="tw-followCard-stopFollow"> Dejar de seguir</span>
                 </button>
             </aside>
         </article>

@@ -8,6 +8,32 @@ import { TwitterFollowCard } from './TwitterFollowCard';
 //esto es un componente ya creado osea el resultado de lo que hemos hecho en TwitterFollowCard, por asi decir aqui llamamos a TwitterFollowCard
 //Con el tema del arroba podemos crear una constante en la cual le pasamos el parametro userName de TwitterFollowCard
 //Y luego se lo indicamos aqui debajo en los elementos de nuestra seccion como nombreDelAvariable = {parametro}
+//---------------------------------------------------------------------------------------------------------
+/*RENDERIZAR LISTAS
+const users = [
+    {
+        userName: 'OhioObssesedGuy',
+        name: 'John Doe',
+        isFollowing: false
+    },
+    {
+        userName: 'JuanitoOjayo',
+        name: 'Junaito',
+        isFollowing: true
+    },
+    {
+        userName: 'StinkyGuy',
+        name: 'Joaquim',
+        isFollowing: false
+    },
+    {
+        userName: 'JosuaToxik',
+        name: 'Josua',
+        isFollowing: true
+    }
+]*/
+
+
 export function App() {
     const formatUserName = (userName) => `@${userName}`
     return (
@@ -19,17 +45,32 @@ export function App() {
         //---------------------------------------------------------------------------------------------------------
         //Le quito el isFollowing ya qu quiero que sea un estado 
         <section className='App'>
-            <TwitterFollowCard formatUserName = {formatUserName} userName="OhioObssesedGuy">
+            {/* MAPEAR ELEMENTOS DE UNA LISTA
+                {
+                users.map(({ userName, name, isFollowing })user => {
+                        <TwitterFollowCard 
+                        key={userName}  usar como key el elemento unico que no se repita, id de BBDDD
+                        userName={userName} 
+                        initialIsFollowingis={isFollowing}
+                        >
+                        {name}
+                        </TwitterFollowCard> 
+                    ))
+                }
+            */}
+            
+            
+            
+            <TwitterFollowCard formatUserName={formatUserName} userName="OhioObssesedGuy" initialIsFollowing={true}>
                 John Doe
             </TwitterFollowCard>
-
-            <TwitterFollowCard formatUserName = {formatUserName} userName="juanito">
+            <TwitterFollowCard formatUserName={formatUserName} userName="juanito" >
                 JuanitoOjayo
             </TwitterFollowCard>
-            <TwitterFollowCard formatUserName = {formatUserName}  userName="StinkyGuy" >
+            <TwitterFollowCard formatUserName={formatUserName} userName="StinkyGuy" >
                 Joaquim
             </TwitterFollowCard>
-            <TwitterFollowCard formatUserName = {formatUserName}  userName="JosuaToxik" >
+            <TwitterFollowCard formatUserName={formatUserName} userName="JosuaToxik" >
                 Josuaa
             </TwitterFollowCard>
         </section>
