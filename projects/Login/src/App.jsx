@@ -59,7 +59,7 @@ function App() {
       </section>
 
       <footer className='animate__animated animate__fadeIn'>
-        <i>Realizado por Alvaro Olmos Sierra 2ºDAW</i>
+        <i>Realizado por Álvaro Olmos Sierra 2ºDAW</i>
       </footer>
     </>
   )
