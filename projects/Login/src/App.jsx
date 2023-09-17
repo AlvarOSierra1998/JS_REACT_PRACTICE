@@ -30,7 +30,7 @@ function App() {
               <button>Login</button>
               </a>
               <div className="Register">
-                <span>Don't Have a account <a href="https://bethesda.net/es/game/starfield" target="_blank">Register</a></span>
+                <span>I case you don't Have a account <a href="https://bethesda.net/es/game/starfield" target="_blank">Register</a></span>
               </div>
             </form>
           </div>
