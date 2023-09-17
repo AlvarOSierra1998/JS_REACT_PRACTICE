@@ -11,6 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 //es necesario especificar en el render el <App />
 root.render(
   <App />
+  
 )
 /* Para no tener que poner 3 veces lo mismo, debemos hacer otro archivos jsx
 y una vez creado en el main.jsx ESPECIFICAMOS <App /> (el nombre de nuestro componente) en el render,

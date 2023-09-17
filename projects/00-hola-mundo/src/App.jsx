@@ -58,9 +58,6 @@ export function App() {
                     ))
                 }
             */}
-            
-            
-            
             <TwitterFollowCard formatUserName={formatUserName} userName="OhioObssesedGuy" initialIsFollowing={true}>
                 John Doe
             </TwitterFollowCard>
