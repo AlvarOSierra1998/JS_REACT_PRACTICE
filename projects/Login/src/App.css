@@ -2,7 +2,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body{
-  background-color: black;
   background-image: url(https://media.tenor.com/9yzaT3kxskAAAAAM/space-stars.gif);
   background-size: 10%;
   background-repeat: repeat;
@@ -11,16 +10,27 @@ body{
 .img{
   background-image: url(https://www.pcspecialist.es/images/landing/pcs/games/lp/starfield-logo.png);
   background-repeat: no-repeat;
-  background-size:20%;
+  background-size:10%;
   border-radius: 12px;
-  background-position: top;
-  position: absolute;
+  background-position: center;
+  margin: auto;
+  margin: 10px;
   overflow: hidden;
-  filter:opacity(1px);
+  opacity: 0.5 ;
   filter: blur(1px);
-  filter: drop-shadow(0 0 0.95rem rgb(255, 187, 0));
+  filter: drop-shadow(0 0 0.95rem rgb(0, 217, 255));
 }
+.Open-Closed--Eye{
+  width: 25px;
+  height: 22px;
+  border-radius: 50%;
+  position: absolute;
+  left: 90%;
+  top: 20px;
+  background-color: rgb(240, 248, 255);
+  
 
+}
 section{
   display: flex;
   align-items: center;
@@ -39,19 +49,32 @@ section{
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px drop-shadow(0 0 0.95rem rgb(0, 217, 255));
   margin: auto 0 0 auto;
-
 
 }
 
 
 h2{
-
   color: aliceblue;
-  font-size: 2em;
+  font-size: 3em;
   text-align: center;
   position: relative;
+  
+}
+h2::after{
+  content: "";
+  display: flex;
+  height: 4px;
+  width: 50%;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease;
+}
+h2:hover::after{
+  transform: scaleX(1);
 }
 .inputBox{
   position: relative;
@@ -64,7 +87,7 @@ h2{
   position: absolute;
   top: 50%;
   left: 5px ;
-  transform: translateY(-50%);
+  transform: translateY(-2%);
   font-size: 1em;
   pointer-events: none;
   transition:  .5s;
@@ -72,8 +95,8 @@ h2{
 }
 input:focus ~ label,
 input:valid ~ label{
-top: -5px;
-
+top: 1px;
+font-weight: bold;
 color: rgb(252, 172, 0) ;
 
 }
@@ -110,6 +133,7 @@ background: transparent;
 .Forget label a:hover{
   text-decoration: underline;
   color: rgb(252, 172, 0);
+  font-weight: bold;
 }
 button{
 width: 100%;
@@ -158,8 +182,8 @@ button:hover::after{
   display: flex;
   justify-content: center;
   margin: 10px ;
-  
 }
+
 
 .Register a{
   text-decoration: none;
@@ -172,4 +196,20 @@ button:hover::after{
   font-weight: bold;
 }
 
+footer{
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__bounce {
+  --animate-duration: .10s;
+}
+
+/* This changes all the animations globally */
+:root {
+  --animate-duration: 800ms;
+  --animate-delay: 0.9s;
+}
 
